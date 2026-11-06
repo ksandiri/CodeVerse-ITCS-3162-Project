@@ -1,0 +1,11 @@
+Feature,Type,Missing,Unique,Values_or_range
+SatisfactionLevel,float64,0,92,0.09 to 1.0
+LastEvaluation,float64,0,65,0.36 to 1.0
+NumberProject,int64,0,6,"2, 3, 4, 5, 6, 7"
+AverageMonthlyHours,int64,0,215,96 to 310
+TimeSpendCompany,int64,0,8,"2, 3, 4, 5, 6, 7, 8, 10"
+WorkAccident,int64,0,2,"0, 1"
+LeftCompany,int64,0,2,"0, 1"
+PromotionLast5years,int64,0,2,"0, 1"
+Department,string,0,10,"accounting, hr, it, management, marketing, product_mng, randd, sales, support, technical"
+Salary,string,0,3,"high, low, medium"
