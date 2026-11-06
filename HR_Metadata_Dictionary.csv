@@ -1,0 +1,11 @@
+Feature,HR definition,Data type,Unique count,Unique values or range,Missing count
+SatisfactionLevel,Employee-reported job satisfaction score (higher indicates greater satisfaction),float64,92,"92 distinct values; min=0.09, max=1.0",0
+LastEvaluation,Most recent employee performance evaluation score,float64,65,"65 distinct values; min=0.36, max=1.0",0
+NumberProject,Number of projects associated with employee workload,int64,6,"2, 3, 4, 5, 6, 7",0
+AverageMonthlyHours,Average hours worked per month,int64,215,"215 distinct values; min=96, max=310",0
+TimeSpendCompany,Years employed at the company,int64,8,"2, 3, 4, 5, 6, 7, 8, 10",0
+WorkAccident,"Whether employee experienced a workplace accident (0=No, 1=Yes)",int64,2,"0, 1",0
+LeftCompany,"Whether employee left the company (0=Stayed, 1=Left)",int64,2,"0, 1",0
+PromotionLast5years,"Whether employee was promoted in the last five years (0=No, 1=Yes)",int64,2,"0, 1",0
+Department,Employee organizational department,object,10,"IT, RandD, accounting, hr, management, marketing, product_mng, sales, support, technical",0
+Salary,"Categorical salary band, not exact salary",object,3,"high, low, medium",0
