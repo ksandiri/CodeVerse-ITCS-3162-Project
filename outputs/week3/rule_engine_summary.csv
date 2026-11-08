@@ -1,0 +1,13 @@
+Feature,Rule,Label,Count,Percent
+NumberProject,<=2 => Underloaded; 3-5 => Normal; >=6 => Overloaded,Normal,11181,74.54
+NumberProject,<=2 => Underloaded; 3-5 => Normal; >=6 => Overloaded,Underloaded,2388,15.92
+NumberProject,<=2 => Underloaded; 3-5 => Normal; >=6 => Overloaded,Overloaded,1430,9.53
+TimeSpendCompany,<=3 => Early; 4-6 => Mid; >=7 => Veteran,Early,9687,64.58
+TimeSpendCompany,<=3 => Early; 4-6 => Mid; >=7 => Veteran,Mid,4748,31.66
+TimeSpendCompany,<=3 => Early; 4-6 => Mid; >=7 => Veteran,Veteran,564,3.76
+WorkAccident,1 => Yes; 0 => No,No,12830,85.54
+WorkAccident,1 => Yes; 0 => No,Yes,2169,14.46
+LeftCompany,1 => Yes; 0 => No,No,11428,76.19
+LeftCompany,1 => Yes; 0 => No,Yes,3571,23.81
+PromotionLast5years,1 => Yes; 0 => No,No,14680,97.87
+PromotionLast5years,1 => Yes; 0 => No,Yes,319,2.13

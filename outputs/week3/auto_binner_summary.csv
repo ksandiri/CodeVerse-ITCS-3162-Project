@@ -1,0 +1,10 @@
+Feature,Bin,Lower_edge,Upper_edge,Observed_min,Observed_max,Count,Percent
+SatisfactionLevel,Low,0.09,0.52,0.09,0.52,5195,34.64
+SatisfactionLevel,Medium,0.52,0.76,0.53,0.76,4870,32.47
+SatisfactionLevel,High,0.76,1.0,0.77,1.0,4934,32.9
+LastEvaluation,Low,0.36,0.61,0.36,0.61,5197,34.65
+LastEvaluation,Medium,0.61,0.82,0.62,0.82,4805,32.04
+LastEvaluation,High,0.82,1.0,0.83,1.0,4997,33.32
+AverageMonthlyHours,Low,96.0,168.0,96.0,168.0,5011,33.41
+AverageMonthlyHours,Medium,168.0,232.0,169.0,232.0,5058,33.72
+AverageMonthlyHours,High,232.0,310.0,233.0,310.0,4930,32.87
