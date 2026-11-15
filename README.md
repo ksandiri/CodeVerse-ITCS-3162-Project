@@ -31,9 +31,18 @@ Rule Engine (rule-based labeling):
 One to Many (Boolean encoding): the 10 labeled features became a 14,999 × 34 matrix of 0/1 values. Each row has exactly one 1 per original feature, so every row sums to 10.
 Outputs (outputs/week3/): cleaned_binned_dataset.csv, boolean_feature_matrix.csv (input for Apriori in Week 4), auto_binner_summary.csv, rule_engine_summary.csv.
 
+Week 4: week4_association_mining.py is the Python version of the KNIME pipeline (Association Rule Learner → Row Filter → Sorter). It reads boolean_feature_matrix.csv (14,999 × 34) from your repo.
+
+Rule extraction: Apriori at support ≥ 5% and confidence ≥ 60% found 1,924 frequent itemsets and 4,489 rules.
+Row Filter: keeps rules with lift ≥ 1, a single-item consequent, and no overlap between the same original feature on both sides. This leaves 2,210 rules.
+Sorter: ranks by lift, then confidence, then support.
+Attrition pass: a second pass at confidence ≥ 35% and lift ≥ 1.3 produced 129 rules, since only about 24% of employees leave.
+Main finding: employees who leave tend to be either underloaded (low hours, few projects, low satisfaction) or overloaded (high hours, many projects, low satisfaction). Both patterns have about 90% confidence and lift of about 3.8.
+Outputs: all CSV files are uploaded to week4.zip.
+
 Contribution Log
 Member: Krishika Sandiri, 
-Work Completed: Set up the GitHub repository and completed the technical distribution audit, HR metadata definitions, and unique value analysis.
+Work Completed: Set up the GitHub repository and completed the technical distribution audit, HR metadata definitions, and unique value analysis. Completed pipeline construction.
 
 Member: Emmanuel Onamade
 Work Completed: Team Organization, Data Binning, Boolean Transformation
