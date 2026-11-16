@@ -31,21 +31,60 @@ Rule Engine (rule-based labeling):
 One to Many (Boolean encoding): the 10 labeled features became a 14,999 × 34 matrix of 0/1 values. Each row has exactly one 1 per original feature, so every row sums to 10.
 Outputs (outputs/week3/): cleaned_binned_dataset.csv, boolean_feature_matrix.csv (input for Apriori in Week 4), auto_binner_summary.csv, rule_engine_summary.csv.
 
-Week 4: week4_association_mining.py is the Python version of the KNIME pipeline (Association Rule Learner → Row Filter → Sorter). It reads boolean_feature_matrix.csv (14,999 × 34) from your repo.
-
-Rule extraction: Apriori at support ≥ 5% and confidence ≥ 60% found 1,924 frequent itemsets and 4,489 rules.
-Row Filter: keeps rules with lift ≥ 1, a single-item consequent, and no overlap between the same original feature on both sides. This leaves 2,210 rules.
-Sorter: ranks by lift, then confidence, then support.
-Attrition pass: a second pass at confidence ≥ 35% and lift ≥ 1.3 produced 129 rules, since only about 24% of employees leave.
-Main finding: employees who leave tend to be either underloaded (low hours, few projects, low satisfaction) or overloaded (high hours, many projects, low satisfaction). Both patterns have about 90% confidence and lift of about 3.8.
-Outputs: all CSV files are uploaded to week4.zip.
-
 Contribution Log
 Member: Krishika Sandiri, 
-Work Completed: Set up the GitHub repository and completed the technical distribution audit, HR metadata definitions, and unique value analysis. Completed pipeline construction.
+Work Completed: Set up the GitHub repository and completed the technical distribution audit, HR metadata definitions, and unique value analysis.
 
 Member: Emmanuel Onamade
 Work Completed: Team Organization, Data Binning, Boolean Transformation
 
 Member: Sowmya Ravuri
 Work Completed: Distribution Analyzation
+
+
+Week 4 — Mining: Association Rule Mining (Deliverable 4: End-to-End Apriori Pipeline)
+Script: week4_apriori.py
+Tool: Python (pandas and mlxtend)
+Input: outputs/week3/boolean_feature_matrix.csv (14,999 employee records and 34 Boolean features)
+Objective: Apply the Apriori algorithm to discover frequent employee attribute combinations and generate meaningful IF-THEN association rules related to low job satisfaction.
+
+Pipeline Steps:
+Data Loading: Import the cleaned and Boolean-encoded feature matrix created during Week 3.
+Apriori Algorithm: Identify frequent itemsets using a minimum support threshold of 0.10 (10%).
+Association Rule Generation: Generate association rules using a minimum confidence threshold of 0.50 (50%).
+Rule Length: Limit frequent itemsets and generated rules to a maximum of three items.
+Rule Filtering: Isolate association rules where the consequent is SatisfactionLevel_Low.
+Rule Sorting: Rank the filtered association rules by lift, confidence, and support in descending order.
+Output Generation: Export frequent itemsets, association rules, and filtered low-satisfaction rules to CSV files.
+
+Model Parameters:
+Minimum Support: 0.10
+Minimum Confidence: 0.50
+Maximum Rule Length: 3
+Target Consequent: SatisfactionLevel_Low
+Evaluation Metrics:
+Support: Measures how frequently an itemset occurs in the employee dataset.
+Confidence: Measures how frequently low satisfaction occurs when the antecedent conditions are present.
+Lift: Measures how strongly the antecedents and low satisfaction are associated relative to statistical independence.
+Run Instructions:
+Install required libraries:
+python -m pip install pandas mlxtend
+Run the modeling script:
+python week4_apriori.py
+Outputs (outputs/week4/):
+frequent_itemsets.csv
+all_association_rules.csv
+low_satisfaction_rules.csv
+
+Next Step: In Week 5, evaluate the strongest association rules, identify the top three antecedent combinations associated with low satisfaction, and develop HR recommendations supported by lift and confidence values.
+
+Week 4 Contribution Log
+
+Member: Krishika Sandiri
+Work Completed: Rule extraction
+
+Member: Emmanuel Onamade
+Work Completed: Algorithm logic
+
+Member: Sowmya Ravuri
+Work Completed: Pipeline construction
