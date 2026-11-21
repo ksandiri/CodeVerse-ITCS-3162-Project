@@ -42,10 +42,10 @@ Outputs: all CSV files are uploaded to week4.zip.
 
 Contribution Log
 Member: Krishika Sandiri, 
-Work Completed: Set up the GitHub repository and completed the technical distribution audit, HR metadata definitions, and unique value analysis. Completed pipeline construction.
+Work Completed: Set up the GitHub repository and completed the technical distribution audit, HR metadata definitions, and unique value analysis. Completed pipeline construction. Satisfaction Driver Report: Strategy
 
 Member: Emmanuel Onamade
-Work Completed: Team Organization, Data Binning, Boolean Transformation
+Work Completed: Team Organization, Data Binning, Boolean Transformation, Satisfaction Driver Report: Deep Dive
 
 Member: Sowmya Ravuri
-Work Completed: Distribution Analyzation
+Work Completed: Distribution Analyzation, Satisfaction Driver Report: Strategy
